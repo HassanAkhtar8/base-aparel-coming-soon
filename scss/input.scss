@@ -1,0 +1,122 @@
+@forward 'global';
+@use "util" as u;
+body{
+ box-sizing: border-box;
+ font-family: u.$jose;
+ display: flex;
+ min-height: 100vh;
+ justify-content: center;
+ align-items: center;
+ font-size: 1rem;
+ color: u.$desatred;
+}
+main{
+    text-align: center;
+}
+b{
+    color: u.$grayred;
+}
+h1{
+    letter-spacing: 0.2rem;
+}
+#mobile-img{
+    margin-bottom: 1.5rem;
+}
+#desktop-img{
+    display: none;
+}
+#input{
+    margin-top: 1.5rem;
+    margin-bottom: 4rem;
+    width: 50%;
+    height: 1.5rem;
+    border-radius: 0.9rem;
+    border: 0.1rem solid u.$desatred;
+    position: relative;
+    padding: 0.2rem;
+}
+.fa-angle-right{
+    color: #fff;
+    font-size: 1.3rem;
+    width: 2.4rem;
+    height: 1.6rem;
+    border-radius: 1rem;
+    position: absolute;
+    background-image: linear-gradient(135deg, hsl(0, 77%, 88%), hsl(0, 89%, 82%));
+    cursor: pointer;
+    top: 20%;
+    right: 25%;
+}
+.error{
+    color: u.$softred;
+    position: absolute;
+    top: 40%;
+    right: 32%;
+    font-size: 0.6rem;
+    font-weight: 900;
+    visibility: hidden;
+}
+#error{
+    position: absolute;
+    top:21%;
+    left: 87%;
+    z-index: 1;
+    visibility: hidden;
+}
+.visi{
+    visibility: visible;
+}
+@media screen and (max-width:300px){
+    #input{
+        width: 70%;
+    }
+    .fa-angle-right{
+        right: 2.5rem;
+    }
+}
+
+@media  screen and (min-width:375px) {
+    body{
+        background-image: url("/images/bg-pattern-desktop.svg");
+    }
+    main{
+        display: flex;
+        min-height: max-content;
+    }
+    #mobile-img{
+        display: none;
+    }
+    h1{
+        margin-top: 3rem;
+        margin-bottom: 1rem;
+    }
+    p{
+        line-height: 1.3rem;
+    }
+    .first{
+        width: 60%;
+        
+    }
+    #desktop-img{
+        display: inline;
+        width: 50%;
+        height: 100vh;
+    }
+    #error{
+        left: 55%;
+    }
+}
+@media screen and (min-width: 840px) {
+    #desktop-img{
+        width: 70%;
+    }
+
+}
+@media screen and (min-width: 840px) {
+    main{
+        width: 100vw;
+    }
+    #desktop-img {
+        width: 70%;
+    }
+}
