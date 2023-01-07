@@ -3,7 +3,7 @@
 body{
  box-sizing: border-box;
  font-family: u.$jose;
- display: flex;
+ display: grid;
  min-height: 100vh;
  justify-content: center;
  align-items: center;
@@ -35,6 +35,17 @@ h1{
     position: relative;
     padding: 0.2rem;
 }
+.fa-solid:active{
+    color: rgb(255, 0, 132);
+
+}
+.fa-angle-right:hover{
+    background-image: linear-gradient(135deg,
+        hsl(0, 95%, 71%),
+        hsl(0, 48%, 45%));
+        transform: translateX(0.5rem) translateY(-0.1rem);
+
+}
 .fa-angle-right{
     color: #fff;
     font-size: 1.3rem;
@@ -46,25 +57,29 @@ h1{
     cursor: pointer;
     top: 20%;
     right: 25%;
+    transition: all 400ms ease-out;
 }
 .error{
     color: u.$softred;
     position: absolute;
-    top: 40%;
+    top: 50%;
     right: 32%;
     font-size: 0.6rem;
     font-weight: 900;
     visibility: hidden;
 }
-#error{
+.icon{
     position: absolute;
-    top:21%;
-    left: 87%;
+    top:43%;
+    left: 70%;
     z-index: 1;
     visibility: hidden;
 }
 .visi{
     visibility: visible;
+}
+img:hover{
+    background-image: linear-gradient(rgb(203, 241, 223), rgb(135, 200, 193));
 }
 @media screen and (max-width:300px){
     #input{
@@ -74,7 +89,6 @@ h1{
         right: 2.5rem;
     }
 }
-
 @media  screen and (min-width:375px) {
     body{
         background-image: url("/images/bg-pattern-desktop.svg");
@@ -105,6 +119,13 @@ h1{
     #error{
         left: 55%;
     }
+    .error{
+        top:40%;
+    }
+    .icon{
+        left: 80%;
+        top: 40%;
+    }
 }
 @media screen and (min-width: 840px) {
     #desktop-img{
@@ -120,3 +141,5 @@ h1{
         width: 70%;
     }
 }
+
+
